@@ -1,0 +1,33 @@
+{
+    "app-id": "org.flatpak.PortalTestAppB",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "portal-test",
+    "finish-args": [
+    ],
+    "modules": [
+        {
+            "name": "libportal",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/flatpak/libportal"
+                }
+            ]
+        },
+        {
+            "name": "portal-test-app",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "/var/home/mclasen/Sources/portal-test-app"
+                }
+            ]
+        }
+    ]
+}
